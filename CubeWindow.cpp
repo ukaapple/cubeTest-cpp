@@ -4,6 +4,7 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
+#include <limits.h>
 
 CubeWindow::CubeWindow(int xBlocks, int yBlocks, int zBlocks) {
     _xBlocks = xBlocks;
