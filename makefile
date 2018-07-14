@@ -1,7 +1,15 @@
 CXX = g++
 TARGET = Program
 CXXFLAGS = -Wall
-LIBS = -lglfw -lglew -framework OpenGL
+
+UNAME = $(shell uname)
+ifeq ($(UNAME),Linux)
+    LIBS = -lglfw -lGLEW -lGL
+endif
+ifeq ($(UNAME),Darwin)
+    LIBS = -lglfw -lglew -framework OpenGL
+endif
+
 SRCS = Program.cpp CubeInsWindow.cpp CubeWindow.cpp FpsCounter.cpp
 OBJS := $(SRCS:.cpp=.o)
 
