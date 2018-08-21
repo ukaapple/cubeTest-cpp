@@ -18,7 +18,7 @@ void FpsCounter::reset() {
 
 string FpsCounter::getFpsInfo() {
     char buf[256];
-    sprintf(buf, "%.1f(1s) %.1f(3s) %.1f(total)", this->_preFpsIn1Sec, this->_preFpsIn3Sec, (this->_frameCntTotal / this->_timeTotal));
+    sprintf(buf, "%.2f(1s) %.2f(3s) %.2f(total)", this->_preFpsIn1Sec, this->_preFpsIn3Sec, (this->_frameCntTotal / this->_timeTotal));
     return string(buf);
 }
 
