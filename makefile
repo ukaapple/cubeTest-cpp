@@ -1,6 +1,6 @@
 CXX = g++
 TARGET = Program
-CXXFLAGS = -Wall
+CXXFLAGS = -Wall -O3
 
 ifeq ($(OS),Windows_NT)
 	LIBS = -lglfw3 -lglew32 -lgdi32 -lopengl32
